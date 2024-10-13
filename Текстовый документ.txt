@@ -1,0 +1,113 @@
+1)
+alexei@UbuntuVM:~$ cat > Pets
+Немецкая овчарка
+Лабрадор-ретривер
+Шотландская вислоухая
+Мейн-кун
+Джунгарские хомяки
+^C
+
+alexei@UbuntuVM:~$ cat > Pack-animals
+Фризская лошадь
+Донская лошадь
+Одногорбый верблюд
+Каталонский осёл                
+^C
+
+alexei@UbuntuVM:~$ cat Pets Pack-animals > Human-Friends
+
+alexei@UbuntuVM:~$ cat Human-Friends
+Немецкая овчарка
+Лабрадор-ретривер
+Шотландская вислоухая
+Мейн-кун
+Джунгарские хомяки
+Фризская лошадь
+Донская лошадь
+Одногорбый верблюд
+Каталонский осёл
+
+alexei@UbuntuVM:~$ ls
+ docker   Human-Friends   Pack   Pack-animals   Pets   snap   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+
+2)
+alexei@UbuntuVM:~$ mkdir animals
+alexei@UbuntuVM:~$ ls
+ animals   docker   Human-Friends   Pack   Pack-animals   Pets   snap   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+
+alexei@UbuntuVM:~$ mv Human-Friends ./animals
+alexei@UbuntuVM:~$ ls
+ animals   docker   Pack   Pack-animals   Pets   snap   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+
+alexei@UbuntuVM:~$ cd animals
+alexei@UbuntuVM:~/animals$ ls
+Human-Friends
+
+3)
+alexei@UbuntuVM:~/Загрузки$ ls
+mysql-apt-config_0.8.32-1_all.deb
+
+alexei@UbuntuVM:~/Загрузки$ sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
+
+alexei@UbuntuVM:~/Загрузки$ sudo apt-get update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]                               
+Пол:3 http://repo.mysql.com/apt/ubuntu noble InRelease [22,7 kB]                                                    
+Пол:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]                                           
+Пол:5 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [538 kB]                        
+Пол:7 http://ru.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [132 kB]                               
+Пол:8 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [8 860 B]                        
+Пол:9 http://ru.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [353 kB]                         
+Пол:10 http://ru.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [68,1 kB]                                                    
+Пол:11 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [384 kB]                                                        
+Пол:12 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [159 kB]                                                       
+Пол:13 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [14,9 kB]                                               
+Пол:14 http://ru.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [10,6 kB]                                                    
+Пол:15 http://ru.archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1 104 B]                                             
+Пол:16 http://repo.mysql.com/apt/ubuntu noble/mysql-tools amd64 Packages [4 161 B]                                                             
+Пол:17 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [382 kB]                            
+Пол:18 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [84,0 kB]
+Пол:19 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [4 704 B]
+Пол:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [353 kB]
+Пол:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [68,1 kB]
+Пол:22 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [277 kB]
+Пол:23 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [117 kB]
+Пол:24 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [10,4 kB]
+Получено 3 370 kB за 1с (2 907 kB/s)                                  
+Чтение списков пакетов… Готово
+
+alexei@UbuntuVM:~/Загрузки$ sudo apt-get install mysql-server
+
+
+4)
+alexei@UbuntuVM:~/Загрузки$ ls
+mysql-apt-config_0.8.32-1_all.deb  yandex-browser-stable_24.7.3.1253-1_amd64.deb
+
+alexei@UbuntuVM:~/Загрузки$ sudo dpkg -i yandex-browser-stable_24.7.3.1253-1_amd64.deb
+Выбор ранее не выбранного пакета yandex-browser-stable.
+(Чтение базы данных … на данный момент установлено 154824 файла и каталога.)
+Подготовка к распаковке yandex-browser-stable_24.7.3.1253-1_amd64.deb …
+Распаковывается yandex-browser-stable (24.7.3.1253-1) …
+Настраивается пакет yandex-browser-stable (24.7.3.1253-1) …
+update-alternatives: используется /usr/bin/yandex-browser-stable для предоставления /usr/bin/yandex-browser (yandex-browser) в автоматическом режиме
+created /usr/share/kio_desktop/DesktopLinks
+created /usr/share/kf5/kio_desktop/DesktopLinks
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1.1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.27-2build1) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+
+alexei@UbuntuVM:~/Загрузки$ sudo dpkg -r yandex-browser-stable
+(Чтение базы данных … на данный момент установлено 155307 файлов и каталогов.)
+Удаляется yandex-browser-stable (24.7.3.1253-1) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1.1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.27-2build1) …
+ 
+
+
+
+
+
